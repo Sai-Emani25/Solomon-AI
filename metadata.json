@@ -1,0 +1,6 @@
+{
+  "name": "Solomon AI",
+  "description": "Multi-agent orchestration console, systems telemetrist, and technical proxy for elite engineering operations.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

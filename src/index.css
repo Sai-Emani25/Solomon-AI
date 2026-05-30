@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #050505;
+    color: #e0e0e0;
+  }
+  
+  .font-space {
+    font-family: 'Space Grotesk', -apple-system, sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', Courier, monospace;
+  }
+}
+
+/* Custom scrollbars for a sleek terminal interface */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff9c;
+}
+
+/* Glow lines and dynamic cyber terminal aesthetics */
+.glow-accent {
+  text-shadow: 0 0 8px rgba(0, 255, 156, 0.5);
+}
+
+.glow-crimson {
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+}
+
+.border-glow-green {
+  box-shadow: 0 0 10px rgba(0, 255, 156, 0.05);
+}
+
+.border-glow-red {
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.05);
+}
+
+/* Subtle CRT monitor mesh overlay */
+.crt-mesh {
+  position: relative;
+}
+
+.crt-mesh::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+  background-size: 100% 4px;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Pulsing operations indicator */
+@keyframes cyber-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.animate-cyber-pulse {
+  animation: cyber-pulse 2s infinite ease-in-out;
+}
